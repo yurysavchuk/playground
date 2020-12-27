@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${MANAGER_S_DB_HOST:localhost}:${MANAGER_S_DB_PORT:25433}/${MANAGER_S_DB_NAME:taskmanagerdb}
+    username: ${MANAGER_S_DB_USER:manager}
+    password: ${MANAGER_S_DB_PASSWORD:manager123}
+    driver-class-name: org.postgresql.Driver
+  batch:
+    initialize-schema: always

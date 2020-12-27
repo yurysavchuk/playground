@@ -1,0 +1,17 @@
+version: '3.7'
+
+volumes:
+  postgres_taskm_data:
+
+services:
+  postgres:
+    image: postgres:11.1-alpine
+    restart: always
+    ports:
+      - 25433:5432
+    volumes:
+      - postgres_taskm_data:/var/lib/postgresql/data:rw
+    environment:
+      POSTGRES_USER: manager
+      POSTGRES_PASSWORD: manager123
+      POSTGRES_DB: taskmanagerdb
