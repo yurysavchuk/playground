@@ -1,0 +1,5 @@
+network : SEP? dependency (SEP dependency)* SEP?;
+dependency
+  : lhs=ID '->' rhs+=ID+
+    {helper.recognizedDependency($lhs, $rhs);}
+  ;
