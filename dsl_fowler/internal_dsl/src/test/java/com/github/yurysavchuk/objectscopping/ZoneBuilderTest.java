@@ -12,6 +12,7 @@ public class ZoneBuilderTest {
 
   @Test
   public void testZoneBuilder() {
+    // given
     ZoneBuilder builder = new ZoneBuilder() {{
       allow(department(MF));
       refuse(department(FINANCE));
@@ -21,6 +22,7 @@ public class ZoneBuilderTest {
         department(K9));
     }};
 
+    // when
     Zone zone = builder.getValue();
 
   }
