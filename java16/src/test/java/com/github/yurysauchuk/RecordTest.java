@@ -20,6 +20,8 @@ public class RecordTest {
         System.out.println(p1.x());
         System.out.println(p1.y());
 
+        System.out.println(p1);
+
         System.out.println(p1.hashCode());
         System.out.println(p2.hashCode());
         System.out.println(p3.hashCode());
